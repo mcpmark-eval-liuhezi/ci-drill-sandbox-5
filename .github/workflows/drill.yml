@@ -1,0 +1,15 @@
+name: CI Drill
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  idle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Idle for 15 minutes
+        run: |
+          echo "Drill run started at $(date -u)"
+          sleep 900
+          echo "Drill run finished at $(date -u)"
